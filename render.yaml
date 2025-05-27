@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: spring-boot-app
+    env: java
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/sending-emails-0.0.1-SNAPSHOT.jar
+    plan: free
