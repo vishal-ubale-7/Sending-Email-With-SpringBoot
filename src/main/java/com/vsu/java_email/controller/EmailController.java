@@ -37,6 +37,7 @@ public class EmailController
                 return e.getMessage();
             }
         }
+    
         // 2nd EndPoint
 
        @RequestMapping("/send-email-with-attachment")  // create endpoint
@@ -44,7 +45,7 @@ public class EmailController
       {
          try {
 
-             //MimeMessage is part of the JavaMail API and supports complex email types like HTML, attachments, images
+             //MimeMessage is part of the JavaMail API and supports complex email types like HTML, attachments, inline images.
             MimeMessage message = mailSender.createMimeMessage();
 
              MimeMessageHelper helper = new MimeMessageHelper(message,true);
