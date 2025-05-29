@@ -21,7 +21,8 @@ public class EmailController
         @RequestMapping("/send-email")  // create endpoint
         public String sendEmail()       // crate method
         {
-            try {
+               try 
+                {
                 SimpleMailMessage message = new SimpleMailMessage();  // create object
 
                 message.setFrom("vishalubale1506@gmail.com"); // call the method
@@ -31,7 +32,7 @@ public class EmailController
 
                 mailSender.send(message);
                 return "success!";  // return message
-            }
+               }
             catch (Exception e)
             {
                 return e.getMessage();
@@ -39,7 +40,6 @@ public class EmailController
         }
     
         // 2nd EndPoint
-
        @RequestMapping("/send-email-with-attachment")  // create endpoint
          public String sendEmailWithAttachment()       // crate method
       {
