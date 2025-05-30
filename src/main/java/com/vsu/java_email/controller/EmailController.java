@@ -39,7 +39,7 @@ public class EmailController
             }
         }
     
-        // 2nd EndPoint
+        // 2nd EndPoint-Attachment Documents,images,pdf,ppt
        @RequestMapping("/send-email-with-attachment")  // create endpoint
          public String sendEmailWithAttachment()       // crate method
       {
