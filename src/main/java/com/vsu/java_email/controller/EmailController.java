@@ -43,12 +43,13 @@ public class EmailController
        @RequestMapping("/send-email-with-attachment")  // create endpoint
          public String sendEmailWithAttachment()       // crate method
       {
-         try {
+         try
+             {
 
              //MimeMessage is part of the JavaMail API and supports complex email types like HTML, attachments, inline images.
             MimeMessage message = mailSender.createMimeMessage();
 
-             MimeMessageHelper helper = new MimeMessageHelper(message,true);
+             MimeMessageHelper helper = new MimeMessageHelper(message,true); // create helper class
 
             helper.setFrom("vishalubale1506@gmail.com"); // call the method
             helper.setTo("ubalevishal2019@gmail.com");
